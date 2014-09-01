@@ -10,6 +10,7 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 gem 'haml'
 gem 'haml-rails'
+gem 'devise'
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
 gem 'tzinfo-data', platforms: [:mingw, :mswin]
