@@ -12,5 +12,6 @@
 			%li
 				%a{:href => "#"} Link
 		%ul.nav.navbar-nav.navbar-right
-			%li
-				= link_to "login", new_user_session_path
+			-unless user_signed_in?
+				%li
+					= link_to "login", new_user_session_path

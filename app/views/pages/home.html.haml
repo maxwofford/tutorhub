@@ -1,11 +1,10 @@
 #hero
 	.container
-		%h1.hero-text.animated.fadeInDown
+		%h1.hero-text
 			An online augment 
-			to inclass teaching
+			%br/
+			to in-class teaching
 		%p.sub-text
 			Tech is not a new way to teach; it should augment how we already teach. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		= link_to  "See the tour", about_path
-		%br/
-		= link_to "Sign up free", new_user_registration_path
-		.img
+		= link_to "See the tour", about_path, :class => "btn btn-default"
+		= link_to "Sign up free", new_user_registration_path, :class => "btn btn-default"
