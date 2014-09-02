@@ -1,10 +1,14 @@
-#hero
+-if user_signed_in?
 	.container
-		%h1.hero-text
-			An online augment 
-			%br/
-			to in-class teaching
-		%p.sub-text
-			Tech is not a new way to teach; it should augment how we already teach. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-		= link_to "See the tour", about_path, :class => "btn btn-default"
-		= link_to "Sign up free", new_user_registration_path, :class => "btn btn-default"
+		%h1 Content for user who is signed in
+-else
+	#hero
+		.container
+			%h1.hero-text
+				An online augment 
+				%br/
+				to in-class teaching
+			%p.sub-text
+				Tech is not a new way to teach; it should augment how we already teach. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+			= link_to "See the tour", about_path, :class => "btn btn-default"
+			= link_to "Sign up free", new_user_registration_path, :class => "btn btn-default"

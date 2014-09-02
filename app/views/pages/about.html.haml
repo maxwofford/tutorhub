@@ -1,14 +1,20 @@
-%h1 Syllabus
-%p The purpose of this class is for you to learn how to use Stencil as a tool in your class. 
-
-%p By the end of this class you can:
-%ul
-	%li Integrate stencil into your teaching curriculum.
-	%li Make badges, achievements, and implement a 'leveling-up' system into your curriculum.
-	%li Create quests, challenges, and tests to help your studens 'level up'.
-	%li Organize class resources on information pages.
-	%li Quickly enroll an entire classroom.
-	%li Moderate an online class forum.
-
-%p This class is intended to quickly get you set up using a simple website. It will likely take 1 hour each day for one day of the week to master.
-= link_to 'Enroll now!', new_user_registration_path, :class => "btn btn-success"
+-if user_signed_in?
+	.container
+		%h1 Progress for #{current_user.email}
+		.progress
+			.progress-bar.progress-bar-striped.active{"aria-valuemax" => "100", "aria-valuemin" => "0", "aria-valuenow" => "45", :role => "progressbar", :style => "width: 45%"}
+				%span.sr-only "45% Complete"
+-else 
+	.container
+		%h1 Syllabus
+		%p The purpose of this class is for you to learn how to use Stencil as a tool in your class. 
+		%p By the end of this class you can:
+		%ul
+			%li Integrate stencil into your teaching curriculum.
+			%li Make badges, achievements, and implement a 'leveling-up' system into your curriculum.
+			%li Create quests, challenges, and tests to help your studens 'level up'.
+			%li Organize class resources on information pages.
+			%li Quickly enroll an entire classroom.
+			%li Moderate an online class forum.
+		%p This class is intended to quickly get you set up using a simple website. It will likely take 1 hour each day for one day of the week to master.
+		= link_to 'Enroll now!', new_user_registration_path, :class => "btn btn-success"
